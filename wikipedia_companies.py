@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
 import re
-from IPython import embed
-
 
 class WikipediaCompaniesSpider(scrapy.Spider):
     name = 'wikipedia_companies'
@@ -27,7 +25,6 @@ class WikipediaCompaniesSpider(scrapy.Spider):
                 line = ",".join(values)
                 output_str += "%s\n" % line
             
-            embed()
             ofh.write(output_str)
 
 
